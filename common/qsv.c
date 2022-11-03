@@ -22,6 +22,8 @@
 
 #include "cpp_compat.h"
 
+#include <errno.h>
+#include <stdint.h>
 #include <string.h>
 
 #ifdef __cplusplus
@@ -30,7 +32,13 @@ extern "C"
 #endif  /* __cplusplus */
 #include <libavcodec/avcodec.h>
 #include <libavcodec/bsf.h>
-#include <libavutil/mem.h>
+#include <libavcodec/codec.h>
+#include <libavcodec/codec_id.h>
+#include <libavcodec/codec_par.h>
+#include <libavcodec/packet.h>
+#include <libavutil/error.h>
+#include <libavutil/frame.h>
+#include <libavutil/pixfmt.h>
 #ifdef __cplusplus
 }
 #endif  /* __cplusplus */

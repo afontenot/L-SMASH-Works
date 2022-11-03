@@ -20,6 +20,21 @@
 
 /* This file is available under an ISC license. */
 
+#include <stdint.h>
+
+#ifdef __cplusplus
+extern "C"
+{
+#endif  /* __cplusplus */
+#include "lwlibav_audio.h"
+#include "lwlibav_dec.h"
+#include "lwlibav_video.h"
+#include "progress.h"
+#include "utils.h"
+#ifdef __cplusplus
+}
+#endif  /* __cplusplus */
+
 /* lwindex version
  * Major.Minor.Micro.Build */
 #define LWINDEX_VERSION ((0 << 24) | (0 << 16) | (2 << 8) | 0)

@@ -20,11 +20,40 @@
 
 /* This file is available under an ISC license. */
 
+#ifndef LWLIBAV_DEC_H
+#define LWLIBAV_DEC_H
+
 #define SEEK_DTS_BASED      0x00000001
 #define SEEK_PTS_BASED      0x00000002
 #define SEEK_POS_BASED      0x00000004
 #define SEEK_POS_CORRECTION 0x00000008
 #define SEEK_PTS_GENERATED  0x00000010
+
+#include <errno.h>
+#include <stddef.h>
+#include <stdint.h>
+
+#ifdef __cplusplus
+extern "C"
+{
+#endif  /* __cplusplus */
+#include <libavcodec/avcodec.h>
+#include <libavcodec/codec.h>
+#include <libavcodec/codec_id.h>
+#include <libavcodec/codec_par.h>
+#include <libavcodec/packet.h>
+#include <libavformat/avformat.h>
+#include <libavutil/dict.h>
+#include <libavutil/error.h>
+#include <libavutil/frame.h>
+#include <libavutil/pixfmt.h>
+#include <libavutil/rational.h>
+#include <libavutil/samplefmt.h>
+#ifdef __cplusplus
+}
+#endif  /* __cplusplus */
+
+#include "utils.h"
 
 typedef struct
 {
@@ -191,3 +220,5 @@ int try_decode_audio_frame
     uint32_t                  frame_number,
     char                     *error_string
 );
+
+#endif /* LWLIBAV_DEC_H */

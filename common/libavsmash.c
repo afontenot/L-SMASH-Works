@@ -22,6 +22,8 @@
 
 #include "cpp_compat.h"
 
+#include <inttypes.h>
+#include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 
@@ -30,9 +32,13 @@ extern "C"
 {
 #endif  /* __cplusplus */
 #include <lsmash.h>
+#include <libavcodec/codec.h>
+#include <libavcodec/defs.h>
 #include <libavformat/avformat.h>
 #include <libavcodec/avcodec.h>
+#include <libavutil/avutil.h>
 #include <libavutil/channel_layout.h>
+#include <libavutil/pixfmt.h>
 #include <libavutil/mem.h>
 #ifdef __cplusplus
 }
@@ -40,7 +46,6 @@ extern "C"
 
 #include "utils.h"
 #include "libavsmash.h"
-#include "qsv.h"
 #include "decode.h"
 
 #define BYTE_SWAP_16( x ) ((( x ) << 8 & 0xff00)  | (( x ) >> 8 & 0x00ff))

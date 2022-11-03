@@ -27,16 +27,37 @@
 
 #include "cpp_compat.h"
 
+#include <assert.h>
+#include <errno.h>
+#include <inttypes.h>
+#include <stdarg.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
 #ifdef __cplusplus
 extern "C"
 {
 #endif  /* __cplusplus */
 #include <libavformat/avformat.h>       /* Demuxer */
+#include <libavformat/avio.h>
 #include <libavcodec/avcodec.h>         /* Decoder */
 #include <libavcodec/bsf.h>
-#include <libswresample/swresample.h>   /* Resampler/Buffer */
+#include <libavcodec/codec.h>
+#include <libavcodec/codec_id.h>
+#include <libavcodec/codec_par.h>
+#include <libavcodec/defs.h>
+#include <libavcodec/packet.h>
 #include <libavutil/mathematics.h>      /* Timebase rescaler */
 #include <libavutil/pixdesc.h>
+#include <libavutil/avutil.h>
+#include <libavutil/channel_layout.h>
+#include <libavutil/error.h>
+#include <libavutil/frame.h>
+#include <libavutil/mem.h>
+#include <libavutil/pixfmt.h>
+#include <libavutil/rational.h>
+#include <libavutil/samplefmt.h>
 #ifdef __cplusplus
 }
 #endif  /* __cplusplus */
@@ -44,7 +65,6 @@ extern "C"
 #include "osdep.h"
 #include "utils.h"
 #include "video_output.h"
-#include "audio_output.h"
 #include "lwlibav_dec.h"
 #include "lwlibav_video.h"
 #include "lwlibav_video_internal.h"

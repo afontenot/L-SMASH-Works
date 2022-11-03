@@ -20,6 +20,26 @@
 
 /* This file is available under an ISC license. */
 
+#ifndef VIDEO_OUTPUT_H
+#define VIDEO_OUTPUT_H
+
+#include <stdint.h>
+
+#ifdef __cplusplus
+extern "C"
+{
+#endif  /* __cplusplus */
+#include <libavutil/frame.h>
+#include <libavutil/pixfmt.h>
+#ifdef __cplusplus
+}
+#endif  /* __cplusplus */
+
+#include "utils.h"
+
+// forward decl
+struct AVCodecContext;
+
 #define REPEAT_CONTROL_CACHE_NUM 2
 
 #define LW_FRAME_PROP_CHANGE_FLAG_WIDTH        (1<<0)
@@ -106,3 +126,5 @@ void lw_cleanup_video_output_handler
 #ifdef __cplusplus
 }
 #endif  /* __cplusplus */
+
+#endif /* VIDEO_OUTPUT_H */

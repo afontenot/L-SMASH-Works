@@ -22,6 +22,8 @@
 
 #include "cpp_compat.h"
 
+#include <string.h>
+
 #ifdef __cplusplus
 extern "C"
 {
@@ -29,9 +31,11 @@ extern "C"
 #include <lsmash.h>
 #include <libavformat/avformat.h>
 #include <libavcodec/avcodec.h>
-#include <libswresample/swresample.h>
-#include <libavutil/mem.h>
-#include <libavutil/opt.h>
+#include <libavcodec/codec_par.h>
+#include <libavcodec/packet.h>
+#include <libavutil/avutil.h>
+#include <libavutil/frame.h>
+#include <libavutil/mathematics.h>
 #ifdef __cplusplus
 }
 #endif  /* __cplusplus */

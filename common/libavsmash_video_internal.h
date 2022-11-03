@@ -20,6 +20,20 @@
 
 /* This file is available under an ISC license. */
 
+#include <stdint.h>
+
+#ifdef __cplusplus
+extern "C"
+{
+#endif  /* __cplusplus */
+#include <libavutil/frame.h>
+#include <lsmash.h>
+#ifdef __cplusplus
+}
+#endif  /* __cplusplus */
+
+#include "libavsmash.h"
+
 #define SEEK_MODE_NORMAL     0
 #define SEEK_MODE_UNSAFE     1
 #define SEEK_MODE_AGGRESSIVE 2

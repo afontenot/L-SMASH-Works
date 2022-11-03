@@ -20,6 +20,23 @@
 
 /* This file is available under an ISC license. */
 
+#include <stdint.h>
+
+#ifdef __cplusplus
+extern "C"
+{
+#endif  /* __cplusplus */
+#include <libavcodec/avcodec.h>
+#include <libavformat/avformat.h>
+#include <libavutil/samplefmt.h>
+#include <lsmash.h>
+#ifdef __cplusplus
+}
+#endif  /* __cplusplus */
+
+#include "audio_output.h"
+#include "utils.h"
+
 /*****************************************************************************
  * Opaque Handlers
  *****************************************************************************/

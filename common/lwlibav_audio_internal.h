@@ -20,6 +20,25 @@
 
 /* This file is available under an ISC license. */
 
+#include <stdint.h>
+
+#ifdef __cplusplus
+extern "C"
+{
+#endif  /* __cplusplus */
+#include <libavcodec/avcodec.h>
+#include <libavcodec/codec_id.h>
+#include <libavcodec/packet.h>
+#include <libavformat/avformat.h>
+#include <libavutil/frame.h>
+#include <libavutil/rational.h>
+#ifdef __cplusplus
+}
+#endif  /* __cplusplus */
+
+#include "lwlibav_dec.h"
+#include "utils.h"
+
 typedef struct
 {
     int64_t  pts;

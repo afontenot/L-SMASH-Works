@@ -20,6 +20,22 @@
 
 /* This file is available under an ISC license. */
 
+#include <stdint.h>
+
+#ifdef __cplusplus
+extern "C"
+{
+#endif  /* __cplusplus */
+#include <libavcodec/avcodec.h>
+#include <libavcodec/codec.h>
+#include <libavcodec/codec_id.h>
+#include <libavcodec/codec_par.h>
+#include <libavcodec/packet.h>
+#include <libavutil/frame.h>
+#ifdef __cplusplus
+}
+#endif  /* __cplusplus */
+
 static inline uint32_t get_decoder_delay
 (
     AVCodecContext *ctx

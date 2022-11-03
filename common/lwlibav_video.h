@@ -20,6 +20,25 @@
 
 /* This file is available under an ISC license. */
 
+#ifndef LWLIBAV_VIDEO_H
+#define LWLIBAV_VIDEO_H
+
+#include <stdint.h>
+
+#ifdef __cplusplus
+extern "C"
+{
+#endif  /* __cplusplus */
+#include <libavcodec/avcodec.h>
+#include <libavutil/frame.h>
+#ifdef __cplusplus
+}
+#endif  /* __cplusplus */
+
+#include "lwlibav_dec.h"
+#include "utils.h"
+#include "video_output.h"
+
 /*****************************************************************************
  * Opaque Handlers
  *****************************************************************************/
@@ -210,3 +229,5 @@ enum lw_field_info lwlibav_video_get_field_info
 #ifdef __cplusplus
 }
 #endif  /* __cplusplus */
+
+#endif /* LWLIBAV_VIDEO_H */

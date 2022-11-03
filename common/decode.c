@@ -20,12 +20,17 @@
 
 /* This file is available under an ISC license. */
 
+#include <errno.h>
+#include <string.h>
+
 #ifdef __cplusplus
 extern "C"
 {
 #endif  /* __cplusplus */
 #include <libavcodec/avcodec.h>
+#include <libavutil/avutil.h>
 #include <libavutil/cpu.h>
+#include <libavutil/error.h>
 #include <libavutil/opt.h>
 #ifdef __cplusplus
 }

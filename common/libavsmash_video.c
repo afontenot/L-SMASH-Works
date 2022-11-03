@@ -24,6 +24,7 @@
 
 #include <inttypes.h>
 #include <float.h>
+#include <string.h>
 
 #ifdef __cplusplus
 extern "C"
@@ -32,6 +33,9 @@ extern "C"
 #include <lsmash.h>
 #include <libavformat/avformat.h>
 #include <libavcodec/avcodec.h>
+#include <libavcodec/codec_par.h>
+#include <libavcodec/packet.h>
+#include <libavutil/avutil.h>
 #ifdef __cplusplus
 }
 #endif  /* __cplusplus */

@@ -26,7 +26,6 @@
 extern "C"
 {
 #endif  /* __cplusplus */
-#include <libavcodec/avcodec.h>
 #include <libswresample/swresample.h>
 #include <libavutil/samplefmt.h>
 #include <libavutil/opt.h>

@@ -20,7 +20,19 @@
 
 /* This file is available under an ISC license. */
 
+#include <stdint.h>
 #include <string.h>
+
+#ifdef __cplusplus
+extern "C"
+{
+#endif  /* __cplusplus */
+#include <libavutil/channel_layout.h>
+#include <libavutil/samplefmt.h>
+#include <libswresample/swresample.h>
+#ifdef __cplusplus
+}
+#endif  /* __cplusplus */
 
 typedef struct
 {

@@ -25,7 +25,6 @@
 #include <stdio.h>
 #include <stdarg.h>
 #include <string.h>
-#include <inttypes.h>
 #include <math.h>
 
 #include "utils.h"

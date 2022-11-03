@@ -20,6 +20,14 @@
 
 /* This file is available under an ISC license. */
 
+#include <stdint.h>
+
+#include <libavcodec/avcodec.h>
+#include <libavformat/avformat.h>
+#include <libavutil/frame.h>
+
+#include <VapourSynth.h>
+
 #include "../common/video_output.h"
 
 typedef int component_reorder_t;

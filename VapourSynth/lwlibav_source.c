@@ -23,14 +23,25 @@
 
 #define NO_PROGRESS_HANDLER
 
+/* System */
+#include <stdint.h>
+
 /* Libav (LGPL or GPL) */
 #include <libavformat/avformat.h>       /* Codec specific info importer */
 #include <libavcodec/avcodec.h>         /* Decoder */
-#include <libswscale/swscale.h>         /* Colorspace converter */
-#include <libswresample/swresample.h>   /* Audio resampler */
-#include <libavutil/imgutils.h>
+#include <libavcodec/packet.h>
+#include <libavutil/frame.h>
+#include <libavutil/log.h>
+#include <libavutil/pixdesc.h>
+#include <libavutil/samplefmt.h>
+
+/* VapourSynth (LGPL) */
+#include <VapourSynth.h>
 
 #include "../common/audio_output.h"
+#include "../common/utils.h"
+#include "../common/video_output.h"
+
 #ifndef _MSC_VER
 /* Dummy definitions.
  * Audio resampler/buffer is NOT used at all in this filter. */

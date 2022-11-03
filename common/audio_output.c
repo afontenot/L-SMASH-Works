@@ -22,12 +22,15 @@
 
 #include "cpp_compat.h"
 
+#include <stddef.h>
+
 #ifdef __cplusplus
 extern "C"
 {
 #endif  /* __cplusplus */
 #include <libavcodec/avcodec.h>
 #include <libswresample/swresample.h>
+#include <libavutil/channel_layout.h>
 #include <libavutil/mem.h>
 #ifdef __cplusplus
 }

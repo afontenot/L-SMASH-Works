@@ -20,9 +20,14 @@
 
 /* This file is available under an ISC license. */
 
+#ifndef LW_UTILS_H
+#define LW_UTILS_H
+
 #include <stdlib.h>
 #include <stdint.h>
-#include <assert.h>
+
+// forward decl
+struct lw_log_handler_tag;
 
 #define MIN( a, b ) ((a) < (b) ? (a) : (b))
 #define MAX( a, b ) ((a) > (b) ? (a) : (b))
@@ -144,3 +149,5 @@ int lw_try_rational_framerate
 #ifdef __cplusplus
 }
 #endif  /* __cplusplus */
+
+#endif /* LW_UTILS_H */

@@ -20,6 +20,27 @@
 
 /* This file is available under an ISC license. */
 
+#include <stdint.h>
+
+#ifdef __cplusplus
+extern "C"
+{
+#endif  /* __cplusplus */
+#include <libavcodec/avcodec.h>
+#include <libavcodec/codec_id.h>
+#include <libavcodec/packet.h>
+#include <libavformat/avformat.h>
+#include <libavutil/frame.h>
+#include <libavutil/pixfmt.h>
+#include <libavutil/rational.h>
+#ifdef __cplusplus
+}
+#endif  /* __cplusplus */
+
+#include "lwlibav_dec.h"
+#include "lwlibav_video.h"
+#include "utils.h"
+
 #define LW_VFRAME_FLAG_KEY                 0x1
 #define LW_VFRAME_FLAG_LEADING             0x2
 #define LW_VFRAME_FLAG_CORRUPT             0x4

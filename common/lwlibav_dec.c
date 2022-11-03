@@ -22,19 +22,23 @@
 
 #include "cpp_compat.h"
 
+#include <string.h>
+
 #ifdef __cplusplus
 extern "C"
 {
 #endif  /* __cplusplus */
 #include <libavformat/avformat.h>   /* Demuxer */
 #include <libavcodec/avcodec.h>     /* Decoder */
+#include <libavcodec/defs.h>
+#include <libavutil/avutil.h>
+#include <libavutil/mem.h>
 #ifdef __cplusplus
 }
 #endif  /* __cplusplus */
 
 #include "utils.h"
 #include "lwlibav_dec.h"
-#include "qsv.h"
 #include "decode.h"
 
 /* Close and open the new decoder to flush buffers in the decoder even if the decoder implements avcodec_flush_buffers().

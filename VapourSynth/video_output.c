@@ -20,8 +20,11 @@
 
 /* This file is available under an ISC license. */
 
-#ifdef _MSC_VER
+#include <errno.h>
+#include <stdlib.h>
 #include <string.h>
+
+#ifdef _MSC_VER
 #define strcasecmp _stricmp
 #else
 #include <strings.h>
@@ -30,13 +33,24 @@
 /* Libav */
 #include <libavformat/avformat.h>       /* Demuxer */
 #include <libavcodec/avcodec.h>         /* Decoder */
+#include <libavcodec/codec.h>
+#include <libavcodec/packet.h>
 #include <libswscale/swscale.h>         /* Colorspace converter */
-#include <libavutil/imgutils.h>
-#include <libavutil/mem.h>
+#include <libavutil/avutil.h>
+#include <libavutil/buffer.h>
+#include <libavutil/error.h>
 #include <libavutil/mastering_display_metadata.h>
+#include <libavutil/pixdesc.h>
+#include <libavutil/pixfmt.h>
+#include <libavutil/rational.h>
+#include <libavutil/version.h>
 
 #include "lsmashsource.h"
 #include "video_output.h"
+#include "../common/utils.h"
+#include "../common/video_output.h"
+
+#include <VapourSynth.h>
 #include <VSHelper.h>
 
 #include <emmintrin.h>

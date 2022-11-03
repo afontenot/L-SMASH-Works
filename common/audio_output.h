@@ -20,7 +20,25 @@
 
 /* This file is available under an ISC license. */
 
+#ifndef AUDIO_OUTPUT_H
+#define AUDIO_OUTPUT_H
+
 #include "cpp_compat.h"
+
+#include <stdint.h>
+
+#ifdef __cplusplus
+extern "C"
+{
+#endif  /* __cplusplus */
+#include <libswresample/swresample.h>   /* Resampler/Buffer */
+#include <libavcodec/avcodec.h>
+#include <libavcodec/packet.h>
+#include <libavutil/frame.h>
+#include <libavutil/samplefmt.h>
+#ifdef __cplusplus
+}
+#endif  /* __cplusplus */
 
 typedef struct
 {
@@ -76,3 +94,5 @@ void lw_cleanup_audio_output_handler
 (
     lw_audio_output_handler_t *aohp
 );
+
+#endif /* AUDIO_OUTPUT_H */

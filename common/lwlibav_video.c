@@ -22,7 +22,11 @@
 
 #include "cpp_compat.h"
 
+#include <assert.h>
 #include <float.h>
+#include <limits.h>
+#include <stdio.h>
+#include <string.h>
 
 #ifdef __cplusplus
 extern "C"
@@ -30,6 +34,16 @@ extern "C"
 #endif  /* __cplusplus */
 #include <libavformat/avformat.h>   /* Demuxer */
 #include <libavcodec/avcodec.h>     /* Decoder */
+#include <libavcodec/codec.h>
+#include <libavcodec/codec_par.h>
+#include <libavcodec/packet.h>
+#include <libavcodec/version.h>
+#include <libavformat/avio.h>
+#include <libavutil/avutil.h>
+#include <libavutil/mem.h>
+#include <libavutil/pixdesc.h>
+#include <libavutil/pixfmt.h>
+#include <libavutil/rational.h>
 #include <libavutil/imgutils.h>
 #ifdef __cplusplus
 }

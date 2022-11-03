@@ -22,13 +22,24 @@
 
 #include "cpp_compat.h"
 
+#include <assert.h>
+#include <string.h>
+
 #ifdef __cplusplus
 extern "C"
 {
 #endif  /* __cplusplus */
 #include <libavformat/avformat.h>       /* Demuxer */
 #include <libavcodec/avcodec.h>         /* Decoder */
-#include <libswresample/swresample.h>   /* Resampler/Buffer */
+#include <libavcodec/codec.h>
+#include <libavcodec/codec_desc.h>
+#include <libavcodec/codec_id.h>
+#include <libavcodec/codec_par.h>
+#include <libavcodec/packet.h>
+#include <libavutil/avutil.h>
+#include <libavutil/channel_layout.h>
+#include <libavutil/frame.h>
+#include <libavutil/samplefmt.h>
 #include <libavutil/mem.h>
 #ifdef __cplusplus
 }

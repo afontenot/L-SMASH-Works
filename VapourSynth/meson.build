@@ -11,7 +11,7 @@ version_h = declare_dependency(
     )
 )
 
-add_project_arguments('-DXXH_INLINE_ALL', '-D_FILE_OFFSET_BITS=64', '-DDEFAULT_CACHEDIR=' + get_option('cachedir'), language: 'c')
+add_project_arguments('-Wno-deprecated-declarations', '-DXXH_INLINE_ALL', '-D_FILE_OFFSET_BITS=64', '-DDEFAULT_CACHEDIR=' + get_option('cachedir'), language: 'c')
 
 sources = [
   'libavsmash_source.c',

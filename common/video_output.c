@@ -22,6 +22,8 @@
 
 #include "cpp_compat.h"
 
+#include <stddef.h>
+
 #ifdef __cplusplus
 extern "C"
 {
@@ -35,6 +37,9 @@ extern "C"
 
 #include "utils.h"
 #include "video_output.h"
+
+// forward decl
+struct SwsContext;
 
 /* If YUV is treated as full range, return 1.
  * Otherwise, return 0. */

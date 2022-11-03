@@ -20,6 +20,21 @@
 
 /* This file is available under an ISC license. */
 
+#include <stdint.h>
+
+#ifdef __cplusplus
+extern "C"
+{
+#endif  /* __cplusplus */
+#include <libavcodec/packet.h>
+#include <libavutil/frame.h>
+#include <lsmash.h>
+#ifdef __cplusplus
+}
+#endif  /* __cplusplus */
+
+#include "libavsmash.h"
+
 struct libavsmash_audio_decode_handler_tag
 {
     lsmash_root_t        *root;

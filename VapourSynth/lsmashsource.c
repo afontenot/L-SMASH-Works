@@ -25,16 +25,11 @@
 
 #include <stdio.h>
 #include <stdarg.h>
-#include <string.h>
+
+#include <VapourSynth.h>
 
 #include "lsmashsource.h"
-
-#include "libavutil/ffversion.h"
-#include "libavcodec/version.h"
-#include "libavformat/version.h"
-#include "libavutil/version.h"
-#include "libswscale/version.h"
-//#include "version.h"
+#include "../common/utils.h"
 
 void set_error
 (

@@ -21,20 +21,31 @@
 /* This file is available under an ISC license.
  * However, when distributing its binary file, it will be under LGPL or GPL. */
 
+/* System */
+#include <inttypes.h>
+#include <limits.h>
+#include <stddef.h>
+
 /* L-SMASH (ISC) */
 #include <lsmash.h>                 /* Demuxer */
 
 /* Libav (LGPL or GPL) */
 #include <libavformat/avformat.h>       /* Codec specific info importer */
 #include <libavcodec/avcodec.h>         /* Decoder */
-#include <libswscale/swscale.h>         /* Colorspace converter */
-#include <libavutil/imgutils.h>
+#include <libavutil/frame.h>
+#include <libavutil/log.h>
+#include <libavutil/pixdesc.h>
+
+/* VapourSynth (LGPL) */
+#include <VapourSynth.h>
 
 #include "lsmashsource.h"
 #include "video_output.h"
 
 #include "../common/libavsmash.h"
 #include "../common/libavsmash_video.h"
+#include "../common/utils.h"
+#include "../common/video_output.h"
 
 typedef struct
 {
